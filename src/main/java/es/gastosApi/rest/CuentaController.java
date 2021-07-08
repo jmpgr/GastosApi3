@@ -21,8 +21,8 @@ public class CuentaController {
 
     @GetMapping(value = "/total")
     @ResponseBody
-    public EntityModel<Object> getTotalnCuenta(@RequestParam Long idCuenta, PersistentEntityResourceAssembler assembler) {
+    public double getTotalEnCuenta(@RequestParam Long idCuenta, PersistentEntityResourceAssembler assembler) {
         double total = cuentaDAO.totalEnCuenta(idCuenta);
-        return assembler.toModel(total);
+        return total;
     }
 }
