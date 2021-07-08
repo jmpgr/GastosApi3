@@ -91,8 +91,8 @@ public class MovimientoController {
                     ingresoConId.setIdMovimiento(movimiento.getIdMovimiento());
                     ingresoConId.setConcepto(movimiento.getConcepto());
                     ingresoConId.setImporte(movimiento.getImporte());
-                    categoriaConId.addMovimiento(movimientoConId);
                     ingresoConId.setCuenta(cuentaConId);
+                    categoriaConId.addMovimiento(movimientoConId);
                     ingresoConId.setCompartido(true);
                 }
                 categoriaDAO.save(categoriaConId);
