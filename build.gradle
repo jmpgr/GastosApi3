@@ -26,7 +26,7 @@ dependencies {
 	runtimeOnly 'com.h2database:h2'
 	runtimeOnly 'org.postgresql:postgresql'
 	//implementation project (':Gastos')
-	implementation 'com.github.jmpgr:Gastos3:1.0.0'
+	implementation 'com.github.jmpgr:Gastos32:1.0.0'
 	 
 }
 
