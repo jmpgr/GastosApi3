@@ -77,6 +77,7 @@ public class MovimientoController {
                 movimientoConId.setIdMovimiento(movimiento.getIdMovimiento());
                 movimientoConId.setConcepto(movimiento.getConcepto());
                 movimientoConId.setImporte(movimiento.getImporte());
+                movimientoConId.setFecha(movimiento.getFecha());
                 movimientoConId.setCuenta(cuentaConId);
                 if (movimiento instanceof GastoImpl){
                     GastoConId gastoConId = new GastoConId();
