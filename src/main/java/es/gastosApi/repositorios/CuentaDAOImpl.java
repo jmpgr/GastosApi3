@@ -3,6 +3,7 @@ package es.gastosApi.repositorios;
 import comun.IngresoImpl;
 import comun.Movimiento;
 import es.gastosApi.entidades.CuentaConId;
+import es.gastosApi.entidades.GastoConId;
 import es.gastosApi.entidades.IngresoConId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
@@ -34,6 +35,9 @@ public class CuentaDAOImpl implements CuentaDAOCustom<CuentaConId> {
             Movimiento movimiento = movimientos.get(i);
             if(movimiento instanceof IngresoConId){
                 total += movimiento.getImporte();
+            }
+            if(movimiento instanceof GastoConId){
+                total -= movimiento.getImporte();
             }
         }
 
