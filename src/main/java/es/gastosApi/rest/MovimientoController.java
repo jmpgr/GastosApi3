@@ -83,6 +83,7 @@ public class MovimientoController {
                     gastoConId.setIdMovimiento(movimiento.getIdMovimiento());
                     gastoConId.setConcepto(movimiento.getConcepto());
                     gastoConId.setImporte(movimiento.getImporte());
+                    gastoConId.setFecha(movimiento.getFecha());
                     gastoConId.setCuenta(cuentaConId);
                     gastoConId.setAutorizado(true);
                     categoriaConId.addMovimiento(gastoConId);
@@ -91,6 +92,7 @@ public class MovimientoController {
                     ingresoConId.setIdMovimiento(movimiento.getIdMovimiento());
                     ingresoConId.setConcepto(movimiento.getConcepto());
                     ingresoConId.setImporte(movimiento.getImporte());
+                    ingresoConId.setFecha(movimiento.getFecha());
                     ingresoConId.setCuenta(cuentaConId);
                     categoriaConId.addMovimiento(ingresoConId);
                     ingresoConId.setCompartido(true);
